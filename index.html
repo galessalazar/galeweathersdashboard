@@ -11,18 +11,79 @@
     
     <header id="header"><strong>Weather Dashboard</strong> </header>
 
-    <div class="flex-row align-start align-stretch-md align-content-start              align-content-stretch-md min-100-vh">
+    <!-- <div class="flex-row align-start align-stretch-md align-content-start              align-content-stretch-md min-100-vh"> -->
         
         <div class="col-12 col-md-3 p-5">
        
           <h2>Search for a City:</h2>
        
           <form id="search-form" class="mb-2">
-            <input id='search-input' class="form-control" type="text"  placeholder="Type to search...">
-            <button type="button" class="btn btn-primary w-100">Search</button>
-          </form>
-       
+            <input id='cityInput' class="form-control" type="text"  placeholder="Type to search...">
+            <button id="button" type="submit" class="btn btn-primary w-100">Search</button>
+            
+          </form>  
+          <div class="container"> 
+            <div class="row">
+              <div class="col-md-4">
+                <div class="weather-card">
+                  <h3></h3>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="weather-card">
+                  <h3></h3>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="weather-card">
+                  <h3></h3>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="weather-card">
+                  <h3></h3>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="weather-card">
+                  <h3></h3>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                  <p></p>
+                </div>
+              </div>
+            </div>       
+           </div>
+          
+            <div id="weather-cards"></div>
+
+
+         
+
+          <ul id="previous-cities-list"></ul>
+         
+        
+
+
     </div>
       <script src="./assets/js/script.js"></script>
 </body>
+
 </html>

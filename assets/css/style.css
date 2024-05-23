@@ -5,3 +5,15 @@
     color: white;
     
 }
+#weather-cards {
+    /* Add CSS styles for weather cards */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+#weather-cards p {
+    /* Add CSS styles for paragraphs inside weather cards */
+    margin: 5px 0;
+}
