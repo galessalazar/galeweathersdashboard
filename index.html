@@ -13,76 +13,86 @@
 
     <!-- <div class="flex-row align-start align-stretch-md align-content-start              align-content-stretch-md min-100-vh"> -->
         
-        <div class="col-12 col-md-3 p-5">
+        <!-- <div class="col-12 col-md-3 p-5"> -->
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6 p-5">
+     
+
        
           <h2>Search for a City:</h2>
+
+
        
           <form id="search-form" class="mb-2">
             <input id='cityInput' class="form-control" type="text"  placeholder="Type to search...">
             <button id="button" type="submit" class="btn btn-primary w-100">Search</button>
             
           </form>  
+          <ul id="previous-cities-list"></ul>
+
+
           <div class="container"> 
             <div class="row">
-              <div class="col-md-4">
+          <div class='row row-cols1 row-cols-md-5 g-4' id="weather-cards">
+          
+          
+              <div class="col-md-5">
                 <div class="weather-card">
-                  <h3></h3>
-                  <p></p>
-                  <p></p>
-                  <p></p>
-                  <p></p>
+                  <h5 class="date"></h5>
+                  <p class="temperature"></p>
+                  <p class="weatherDescription"></p>
+                 
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-5">
                 <div class="weather-card">
-                  <h3></h3>
-                  <p></p>
-                  <p></p>
-                  <p></p>
-                  <p></p>
+                  <h5 class="date"></h5>
+                  <p class="temperature"></p>
+                  <p class="weatherDescription"></p>
+                  
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-5">
                 <div class="weather-card">
-                  <h3></h3>
-                  <p></p>
-                  <p></p>
-                  <p></p>
-                  <p></p>
+                  <h5 class="date"></h5>
+                  <p class="temperature"></p>
+                  <p class="weatherDescription"></p>
+                 
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-5">
                 <div class="weather-card">
-                  <h3></h3>
-                  <p></p>
-                  <p></p>
-                  <p></p>
-                  <p></p>
+                  <h5 class="date"></h5>
+                  <p class="temperature"></p>
+                  <p class="weatherDescription"></p>
+                 
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-5">
                 <div class="weather-card">
-                  <h3></h3>
-                  <p></p>
-                  <p></p>
-                  <p></p>
-                  <p></p>
+                  <h5 class="date"></h5>
+                  <p class="temperature"></p>
+                  <p class="weatherDescription"></p>
+                  
                 </div>
               </div>
             </div>       
            </div>
           
-            <div id="weather-cards"></div>
+           </div>
 
 
          
 
-          <ul id="previous-cities-list"></ul>
          
-        
-
-
+         
     </div>
+  </div>
+</div>
+
+
+   
       <script src="./assets/js/script.js"></script>
 </body>
 

@@ -45,7 +45,7 @@ function displayWeatherForecast(data) {
         const weatherDescription = forecastItem.weather[0].description;
 
         const forecastItemElement = document.createElement('div');
-        forecastItemElement.className = 'weather-cards';
+        forecastItemElement.className = 'weather-card';
         forecastItemElement.innerHTML = `
             <h5>Date: ${date.toLocaleDateString()}</h5>
             <p>Temperature: ${temperature}°F</p>
