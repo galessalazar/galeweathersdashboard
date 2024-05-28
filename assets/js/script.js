@@ -1,16 +1,33 @@
 const searchFormEl = document.querySelector('#search-form');
 const weatherForecastDiv = document.getElementById('weather-cards');
 const weatherAPI = '0bf01512d291cbf28790b9de360db79a'; 
+// const searchHistoryEl = document.getElementById('search-history');
 
 searchFormEl.addEventListener('submit', function (event) {  
     event.preventDefault(); 
      
-    document.querySelector('#button').addEventListener('click',function(){
        const cityName = document.getElementById('cityInput').value; 
     getWeather(cityName)
     saveSearchedCity(cityName);
-    })
-});
+    });
+
+    let searchedCities = [];
+
+    // document.getElementById('search-form').addEventListener('submit', handleFormSubmit);
+
+    function handleFormSubmit(event) {
+        event.preventDefault();
+        const cityInput = document.getElementById('cityInput');
+        const searchedCityName = cityInput.value.trim();
+
+       searchedCities.push(searchedCityName);
+    
+        displaycityicons();
+
+        cityInput.value = "";
+
+        
+    }
 
 function getWeather(cityName) { 
     const apiURL = 'https://api.openweathermap.org/data/2.5/forecast';
@@ -35,6 +52,10 @@ function getWeather(cityName) {
         });
 }
 
+function fetchWeatherData(cityName) {
+    getWeather(cityName);
+}
+
 function displayWeatherForecast(data) {
     weatherForecastDiv.innerHTML = '';
 
@@ -57,30 +78,61 @@ function displayWeatherForecast(data) {
 
 function saveSearchedCity(cityName) {
     
-    let cities = JSON.parse(localStorage.getItem('previous-cities-list')) || [];
-    cities.push(cityName);
-    localStorage.setItem('previous-cities-list', JSON.stringify(cities));
+    let previousCitiesList = JSON.parse(localStorage.getItem('previous-cities-list')) || [];
+    previousCitiesList.push(cityName);
+    localStorage.setItem('previous-cities-list', JSON.stringify(previousCitiesList));
     displayPreviousCities();
 }
+//         function displaycityicons() {
 
 function displayPreviousCities() {
     const cities = JSON.parse(localStorage.getItem('previous-cities-list')) || [];
     
     const previousCitiesList = document.getElementById('previous-cities-list');
+
     previousCitiesList.innerHTML = ''; 
-    const removeDuplicateCities = [...new Set(cities)];
+
+        cities.forEach(city => {
+            
+            const icon = document.createElement('button');
+            icon.textContent = city;
+            icon.classList.add('btn', 'btn-secondary', 'm-1', 'fas', 'fa-search');
+
+            icon.addEventListener('click', () => {
+                fetchWeatherData(city);   
+
+});
+            previousCitiesList.appendChild(icon);
+
+
+
+            
+});
+
+}
+const removeDuplicateCities = [...new Set(cities)];
 
     removeDuplicateCities.forEach(cityName => {
         const listItem = document.createElement('li');
         listItem.textContent = cityName;
         previousCitiesList.appendChild(listItem);
+          
+// searchHistoryEl.appendChild(icon);
+           
+//         });         
+//          displaycityicons();
+//     } 
+
+
+    
+
     });
-}
+
 
 
 document.addEventListener('DOMContentLoaded', displayPreviousCities);
 
-// const cityName = document.getElementById('cityInput').value;
-// saveSearchedCity(cityName);
 
+    
+       
 
