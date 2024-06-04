@@ -80,6 +80,8 @@ function saveSearchedCity(cityName) {
     
     let previousCitiesList = JSON.parse(localStorage.getItem('previous-cities-list')) || [];
     previousCitiesList.push(cityName);
+
+    previousCitiesList = [...new Set(previousCitiesList)];
     localStorage.setItem('previous-cities-list', JSON.stringify(previousCitiesList));
     displayPreviousCities();
 }
@@ -101,6 +103,9 @@ function displayPreviousCities() {
             icon.addEventListener('click', () => {
                 fetchWeatherData(city);   
 
+
+                
+
 });
             previousCitiesList.appendChild(icon);
 
@@ -110,23 +115,15 @@ function displayPreviousCities() {
 });
 
 }
-const removeDuplicateCities = [...new Set(cities)];
+// const removeDuplicateCities = [...new Set(cities)];
 
-    removeDuplicateCities.forEach(cityName => {
-        const listItem = document.createElement('li');
-        listItem.textContent = cityName;
-        previousCitiesList.appendChild(listItem);
-          
-// searchHistoryEl.appendChild(icon);
-           
-//         });         
-//          displaycityicons();
-//     } 
+//     removeDuplicateCities.forEach(cityName => {
+//         const listItem = document.createElement('li');
+//         listItem.textContent = cityName;
+//         previousCitiesList.appendChild(listItem);        
+  
 
-
-    
-
-    });
+//     });
 
 
 
