@@ -2,8 +2,8 @@
 
 ## Links
 
-<a href= 'https://github.com/galessalazar/galeweathersdashboard'>Gales Weather Dashboard</a><br>
-<a href=>'https://galessalazar.github.io/galeweathersdashboard/'</a>
+<a href= 'https://github.com/galessalazar/galeweathersdashboard'>Weather Dashboard Github Link</a><br>
+<a href= 'https://galessalazar.github.io/galeweathersdashboard/'>Gales Weather Dashboard</a>
 
 ## Description
 
