@@ -13,7 +13,7 @@
 
 <img src='./image-2.png' alt='![alt text](image.png)'/>
 
-<img src='' alt='![alt text](image-2.png)'/>
+<img src='./image-1.png' alt='![alt text](image-2.png)'/>
 
 ## Contributors
 
