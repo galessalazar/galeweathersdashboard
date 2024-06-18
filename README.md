@@ -3,7 +3,7 @@
 ## Links
 
 <a href= 'https://github.com/galessalazar/galeweathersdashboard'>Gales Weather Dashboard</a><br>
-<a href=''>Update with Deployed Link</a>
+<a href=>'https://galessalazar.github.io/galeweathersdashboard/'</a>
 
 ## Description
 
@@ -11,8 +11,9 @@
 
 ## Visuals
 
-<img src='' alt='website screenshot'/>
-<img src='' alt='github screenshot'/>
+<img src='' alt='![alt text](image.png)'/>
+
+<img src='' alt='![alt text](image-2.png)'/>
 
 ## Contributors
 
